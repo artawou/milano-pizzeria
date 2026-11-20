@@ -1,0 +1,4 @@
+{
+  "storage": "memory",
+  "orderStorageKey": "current_order"
+}
