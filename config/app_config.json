@@ -1,4 +1,6 @@
 {
+  "appName": "Мілано",
   "storage": "memory",
-  "orderStorageKey": "current_order"
+  "currency": "UAH",
+  "orderStorageKey": "milano_order"
 }
