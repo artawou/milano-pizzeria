@@ -2,7 +2,6 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'package:milano_pizzeria/domain/entities/order.dart';
 import 'package:milano_pizzeria/domain/entities/pizza_item.dart';
-import 'package:milano_pizzeria/domain/entities/menu_category.dart';
 import 'package:milano_pizzeria/domain/repositories/order_repository.dart';
 
 import 'package:milano_pizzeria/application/use_cases/add_item_to_order_use_case.dart';
@@ -24,7 +23,7 @@ void main() {
   const margherita = PizzaItem(
     title: 'Маргарита',
     description: 'Томатний соус, моцарела, свіжий базилік',
-    price: 169,
+    price: 169.00,
     category: MenuCategory.pizza,
   );
 
@@ -36,7 +35,7 @@ void main() {
     final order = await addItem(margherita);
 
     expect(order.totalCount, 2);
-    expect(order.total, 338);
+    expect(order.total, 338.00);
     expect(repo.saved.totalCount, 2);
   });
 
